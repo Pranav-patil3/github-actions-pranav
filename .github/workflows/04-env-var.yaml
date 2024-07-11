@@ -1,0 +1,15 @@
+name: 04 - ENV_VAR
+on:
+  workflow_dispatch:
+    
+jobs:
+  EV:
+    env: 
+      MY_ENV: "Test"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print env var
+        run: |
+          "echo Variable value: ${{ $MY_ENV }}"
+
+  

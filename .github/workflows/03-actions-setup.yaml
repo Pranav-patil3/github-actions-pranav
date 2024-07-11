@@ -1,4 +1,4 @@
-name: 04 - Action-setup
+name: 03 - Action-setup
 
 on: workflow_dispatch
 
