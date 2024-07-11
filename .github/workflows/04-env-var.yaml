@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: Print env var
         run: |
-          "echo Variable value: ${{ env.MY_ENV }}"
+          echo "Variable value: ${{ env.MY_ENV }}"
 
   
