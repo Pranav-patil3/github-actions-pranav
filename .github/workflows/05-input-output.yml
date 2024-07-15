@@ -1,0 +1,20 @@
+name: 05-input-output
+
+on: 
+  workflow_dispatch:
+    inputs:
+      status:
+        description: To perform deploy stages or not
+        type: choice
+        options:
+          - success
+          - fail
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print input
+        run: |
+          echo "${{ input.status }}" 
