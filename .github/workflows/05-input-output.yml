@@ -24,7 +24,7 @@ jobs:
       - name: Deploy Stage
         if: ${{ inputs.status == success }}
         run: |
-          echo "${{ Deployment done }}"
+          echo "Deployment done"
           echo "${{ outputs.live-is}}"
         
 
