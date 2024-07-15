@@ -13,8 +13,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    outputs:
+      live-is: ${{steps.build.outputs.live}}
     steps:
       - name: Print input
+        id: build
         run: |
-          echo "${{ inputs.status }}" 
+          echo "${{ inputs.status }}"
+          echo "live=true" >> $GITHUB_OUTPUT
+      - name: Deploy Stage
+        if: ${{ inputs.status == success }}
+        run: |
+          echo "${{ Deployment done }}"
+          echo "${{ outputs.live-is}}"
+        
+
+        
