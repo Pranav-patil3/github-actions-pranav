@@ -17,4 +17,4 @@ jobs:
     steps:
       - name: Print input
         run: |
-          echo "${{ input.status }}" 
+          echo "${{ inputs.status }}" 
