@@ -23,12 +23,13 @@ jobs:
           echo "live=true" >> $GITHUB_OUTPUT
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - name: Deploy Stage
       if: ${{ inputs.status }} == success
       run: |
         echo "Deployment done"
-        echo "${{ outputs.live-is }}"
+        echo "${{ needs.build.outputs.live-is }}"
         
 
         
