@@ -25,7 +25,7 @@ jobs:
         if: ${{ inputs.status == success }}
         run: |
           echo "Deployment done"
-          echo "${{ outputs.live-is}}"
+          echo "${{ output.live }}"
         
 
         
