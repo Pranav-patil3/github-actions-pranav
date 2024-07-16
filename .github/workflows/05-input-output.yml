@@ -22,7 +22,7 @@ jobs:
           echo "${{ inputs.status }}"
           echo "live=true" >> $GITHUB_OUTPUT
       - name: Deploy Stage
-        if: ${{ inputs.status == success }}
+        if: ${{ inputs.status }} == success
         run: |
           echo "Deployment done"
           echo "${{ outputs.live-is }}"
